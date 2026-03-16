@@ -3,7 +3,7 @@ public class CuentaBancaria {
     public String numeroCuenta;
     public String titular;
     public double saldo;
-
+    
     public CuentaBancaria(String num, String nombre, double saldoInicial) {
         this.numeroCuenta = num;
         this.titular = nombre;
