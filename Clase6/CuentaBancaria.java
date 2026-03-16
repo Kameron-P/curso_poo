@@ -13,7 +13,6 @@ public class CuentaBancaria {
         saldo = saldo + cantidad; 
         System.out.println("Has depositado: $" + cantidad);
     }
-
     public void retirar(double cantidad) {
         if (cantidad <= saldo) {
             saldo = saldo - cantidad;
