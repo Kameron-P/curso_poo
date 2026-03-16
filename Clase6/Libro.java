@@ -22,7 +22,7 @@ public class Libro {
         disponible=true;
         System.out.println("Has devuelto el libro:"+titulo);
     }    
-    public void estaDispponible(){
+    public void estaDisponible(){
         if (disponible){
             System.out.println("El libro"+titulo+"esta disponible para prestamo");}
             else{

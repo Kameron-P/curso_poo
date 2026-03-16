@@ -12,8 +12,8 @@ public class EjLibro {
         libro1.prestar(); 
 
         System.out.println(" Verificando disponibilidad ");
-        libro1.estaDispponible();
-        libro2.estaDispponible();
+        libro1.estaDisponible();
+        libro2.estaDisponible();
 
         System.out.println(" Devolución ");
         libro1.devolver();
