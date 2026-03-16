@@ -22,7 +22,15 @@ public class Libro {
         disponible=true;
         System.out.println("Has devuelto el libro:"+titulo);
     }    
-    public void estaDispponible
-
+    public void estaDispponible(){
+        if (disponible){
+            System.out.println("El libro"+titulo+"esta disponible para prestamo");}
+            else{
+            System.out.println("El libro"+titulo+" no esta disponible para cambio");}    
     }
+    public String toString(){
+        String estado =(disponible) ? "Disponible": "Prestado";
+        return "Libro:" + titulo + " Autor: " + autor + " Estado: " + estado;
+    }
+    
 }

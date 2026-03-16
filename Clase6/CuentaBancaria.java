@@ -24,4 +24,8 @@ public class CuentaBancaria {
     public String toString() {
         return "CuentaBancaria: Cuenta de " + titular + " - Saldo actual: $" + saldo;
     }
+    public void consultarSaldo() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'consultarSaldo'");
+    }
 }
