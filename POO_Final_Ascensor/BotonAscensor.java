@@ -1,5 +1,7 @@
 package POO_Final_Ascensor;
 
+// Botón dentro del ascensor para seleccionar el piso de destino
+// Hereda de Boton (herencia)
 public class BotonAscensor extends Boton {
 
     private int pisoDestino;

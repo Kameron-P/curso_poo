@@ -1,5 +1,6 @@
 package POO_Final_Ascensor;
 
+// Clase que representa un piso del edificio
 public class Piso {
 
     private int numero;
@@ -38,4 +39,3 @@ public class Piso {
         return boton;
     }
 }
-

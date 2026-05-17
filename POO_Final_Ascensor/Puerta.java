@@ -1,5 +1,6 @@
 package POO_Final_Ascensor;
 
+// Clase que representa la puerta del ascensor o de un piso
 public class Puerta {
 
     private boolean estaAbierta;
@@ -53,4 +54,3 @@ public class Puerta {
         return hayObstaculo;
     }
 }
-

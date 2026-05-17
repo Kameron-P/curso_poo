@@ -1,5 +1,7 @@
 package POO_Final_Ascensor;
 
+// Botón ubicado en cada piso para llamar al ascensor
+// Hereda de Boton (herencia)
 public class BotonPiso extends Boton {
 
     private int numeroPiso;
@@ -45,4 +47,3 @@ public class BotonPiso extends Boton {
         return direccionSolicitada;
     }
 }
-

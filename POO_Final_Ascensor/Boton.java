@@ -1,5 +1,7 @@
 package POO_Final_Ascensor;
 
+// Clase base (padre) para todos los botones del sistema
+// Usamos herencia: BotonPiso y BotonAscensor extienden esta clase
 public abstract class Boton {
 
     private boolean iluminado;

@@ -1,5 +1,6 @@
 package POO_Final_Ascensor;
 
+// Clase principal que coordina todo el sistema del ascensor
 public class SistemaControl {
 
     private Ascensor ascensor;
@@ -42,12 +43,8 @@ public class SistemaControl {
             return;
         }
 
-        // Mover el ascensor al piso solicitado
-        ascensor.mover(numeroPiso);
-
-        // Abrir la puerta del piso y del ascensor
-        pisos[numeroPiso].getPuerta().abrir();
-        ascensor.abrirPuerta();
+        // Agregar la solicitud a la cola del ascensor en lugar de moverlo de inmediato
+        ascensor.agregarSolicitud(numeroPiso);
     }
 
     // Gestionar una solicitud desde dentro del ascensor (seleccionar piso destino)
@@ -59,18 +56,19 @@ public class SistemaControl {
             return;
         }
 
-        // Presionar el botón interno del ascensor
+        // Presionar el botón interno del ascensor (el cual ya agrega a la cola)
         ascensor.presionarBoton(pisoDestino);
-
+    }
+    
+    // Ejecuta y procesa todas las solicitudes pendientes optimizando el movimiento
+    public void procesarTodasLasSolicitudes() {
+        System.out.println("\n=== Iniciando procesamiento de solicitudes pendientes ===");
         // Cerrar puertas antes de mover
         ascensor.cerrarPuerta();
-
-        // Mover el ascensor
-        ascensor.mover(pisoDestino);
-
-        // Abrir puertas al llegar
-        ascensor.abrirPuerta();
-        pisos[pisoDestino].getPuerta().abrir();
+        
+        ascensor.procesarSolicitudes();
+        
+        System.out.println("=== Procesamiento finalizado ===");
     }
 
     // Enviar alerta al equipo de mantenimiento
@@ -100,5 +98,10 @@ public class SistemaControl {
     // Mostrar el estado actual del sistema
     public void mostrarEstado() {
         System.out.println("\n[Estado] " + ascensor.getEstado());
+    }
+    
+    // Mostrar estadísticas de desempeño del ascensor
+    public void mostrarDesempenoAscensor() {
+        ascensor.mostrarDesempeno();
     }
 }
